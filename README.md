@@ -1,2 +1,3 @@
-# BigFileJava
-Open or create a .big file 
+# big文件提取
+本项目可以提取`.big`中的文件
+
