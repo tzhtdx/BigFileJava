@@ -22,20 +22,30 @@ public class HexUtil
 		return value;
 	}
 	
-
-	public static char byte4Char(byte[] res) 
+	public static byte[] int4byte(int i)
 	{
-		int firstByte 				= 0;
-		int secondByte				= 0;
-		char value					= 0;
+        byte[] result 				= new byte[4];
+        result[0] 					= (byte)((i >> 24) & 0xFF);
+        result[1] 					= (byte)((i >> 16) & 0xFF);
+        result[2] 					= (byte)((i >> 8) & 0xFF);
+        result[3] 					= (byte)(i & 0xFF);
+        return result;
+    }
+	
+
+//	public static char byte4Char(byte[] res) 
+//	{
+//		int firstByte 				= 0;
+//		int secondByte				= 0;
+//		char value					= 0;
+//		
+//		firstByte 					= (0xFF & res[0]);
+//		secondByte					= (0xFF & res[1]);
+//		
+//		value = (char) (firstByte << 8 | secondByte);
+//		return value;
+//	}
 		
-		firstByte 					= (0xFF & res[0]);
-		secondByte					= (0xFF & res[1]);
-		
-		value = (char) (firstByte << 8 | secondByte);
-		return value;
-	}
- 	
 	
 	//反转数组
 	public static byte[] Reverse(byte[] res) 
